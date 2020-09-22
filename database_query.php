@@ -19,16 +19,16 @@ $resultSet = mysqli_query($connection, $sqlQuery);
 if($resultSet === false) :
     echo mysqli_error();
     exit;
- else :
+else :
     $personList = mysqli_fetch_all($resultSet);
     foreach ($personList as $person) :
         foreach ($person as $p) :
             echo $p; ?>
 
-    <br><br>
+            <br><br>
 
-    <?php
+        <?php
         endforeach;
-        endforeach;
-        endif;
-        ?>
+    endforeach;
+endif;
+?>
